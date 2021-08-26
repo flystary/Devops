@@ -156,3 +156,16 @@ func mapDbWrite()  {
 
 }
 */
+
+func equal(x, y map[string]int) bool {
+	if len(x) != len(y) {
+		return false
+	}
+	for k, xValue := range x {
+		if yVaalue, ok := y[k]; !ok || yVaalue != xValue {
+			return false
+		}
+
+	}
+	return true
+}
