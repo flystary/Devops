@@ -4,6 +4,34 @@
 
 This is an example of the `cobra` project
 
+Execute the following command in the current path to compile the project
+
+```bash
+go build -o ly  main.go
+```
+
+Use `ly --help`, you will be prompted how to use the ` ly` command
+
+```bash
+Show Current Time. For example:
+
+With this command, you can view current time or customize the time format.
+
+Usage:
+  ly [command]
+
+Available Commands:
+  completion  generate the autocompletion script for the specified shell
+  help        Help about any command
+  show        Display the current time
+  version     A brief description of your command
+
+Flags:
+  -h, --help   help for ly
+
+Use "ly [command] --help" for more information about a command.
+```
+
 ### example
 
 ` Algorithm` algorithm example
