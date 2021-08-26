@@ -81,3 +81,33 @@ func isPrime(i int) bool {
 	}
 	return true
 }
+
+func wage() {
+	var n, salary, sum, a int
+	var err error
+
+	fmt.Print("请属于你的工龄：")
+	_, err = fmt.Scanln(&n)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Print("请输入你的基本工资：")
+	_, err = fmt.Scanln(&salary)
+	if err != nil {
+		fmt.Println(err)
+	}
+	if n >= 0 && n < 1 {
+		a = 200
+	} else if n >= 1 && n < 3 {
+		a = 500
+	} else if n >= 3 && n < 5 {
+		a = 1000
+	} else if n >= 5 && n < 10 {
+		a = 2500
+	} else if n >= 10 && n < 15 {
+		a = 5000
+	}
+	sum = salary + a
+	fmt.Printf("您目前工作了%d年，基本工资为%d元,应涨工资%d元,涨后工资%d元", n, salary, a, sum)
+	return
+}

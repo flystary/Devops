@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	//sequence() //计算斐波那契数的算法
 
@@ -30,13 +28,15 @@ func main() {
 	//b = a * 1
 	//fmt.Println(b)
 
-	var str []int
-	j := 0
-	for i := 2; i < 100; i++ {
-		if isPrime(i) {
-			str = append(str, i)
-			j++
-		}
-	}
-	fmt.Println(str)
+	//var str []int   //求100以内的质数
+	//j := 0
+	//for i := 2; i < 100; i++ {
+	//	if isPrime(i) {
+	//		str = append(str, i)
+	//		j++
+	//	}
+	//}
+	//fmt.Println(str)
+
+	wage()
 }
