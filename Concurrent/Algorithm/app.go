@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"time"
 )
 
@@ -70,4 +71,13 @@ func isDaffodilNum(num int) bool {
 		return true
 	}
 	return false
+}
+
+func isPrime(i int) bool {
+	for j := 2; float64(j) <= math.Sqrt(float64(i)); j++ {
+		if i%j == 0 {
+			return false
+		}
+	}
+	return true
 }

@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 func main() {
 	//sequence() //计算斐波那契数的算法
@@ -24,12 +21,22 @@ func main() {
 	//		fmt.Println("属于水仙花数有: ", i)
 	//	}
 	//}
-	var a, b time.Duration
-	a = time.Second
-	b = a * 3
-	fmt.Println(b)
-	a = time.Duration(500) * time.Millisecond
-	b = a * 1
-	fmt.Println(b)
 
+	//var a, b time.Duration //时间重置
+	//a = time.Second
+	//b = a * 3
+	//fmt.Println(b)
+	//a = time.Duration(500) * time.Millisecond
+	//b = a * 1
+	//fmt.Println(b)
+
+	var str []int
+	j := 0
+	for i := 2; i < 100; i++ {
+		if isPrime(i) {
+			str = append(str, i)
+			j++
+		}
+	}
+	fmt.Println(str)
 }
