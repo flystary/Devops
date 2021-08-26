@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//sequence() //计算斐波那契数的算法
 
@@ -38,6 +40,25 @@ func main() {
 	//}
 	//fmt.Println(str)
 
-	wage() //工龄工资计算器
+	//wage() //工龄工资计算器
 
+	x := map[string]int{
+		"A": 0,
+		"B": 1,
+		"C": 2,
+		"D": 3,
+	}
+	y := map[string]int{
+		"B": 1,
+		"C": 2,
+		"D": 3,
+	}
+	z := map[string]int{
+		"A": 0,
+		"B": 1,
+		"C": 2,
+		"D": 3,
+	}
+	fmt.Println(equal(x, y))
+	fmt.Println(equal(x, z))
 }
