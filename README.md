@@ -2,7 +2,7 @@
 
 ### cmd and mian.go
 
-cobra project
+This is an example of the `cobra` project
 
 ### example
 
