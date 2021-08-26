@@ -5,10 +5,13 @@
 This is an example of the `cobra` project
 
 Execute the following command in the current path to compile the project,you will appear a ly executable file.
+##### compile install
 
 ```bash
 go build -o ly  main.go
 ```
+
+##### use
 
 Use `ly --help`, you will be prompted how to use the ` ly` command
 
@@ -32,6 +35,7 @@ Flags:
 Use "ly [command] --help" for more information about a command.
 ```
 
+##### exaple
 How to use `ly`
 
 ```bash
