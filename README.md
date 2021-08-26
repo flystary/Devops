@@ -17,24 +17,18 @@ Use `ly --help`, you will be prompted how to use the ` ly` command
 
 ```bash
 Show Current Time. For example:
-
 With this command, you can view current time or customize the time format.
-
 Usage:
   ly [command]
-
 Available Commands:
   completion  generate the autocompletion script for the specified shell
   help        Help about any command
   show        Display the current time
   version     A brief description of your command
-
 Flags:
   -h, --help   help for ly
 
-Use "ly [command] --help" for more information about a command.
 ```
-
 ##### example
 How to use `ly`
 ```bash
@@ -43,7 +37,7 @@ ly show                                  #展示当前时间  2021-08-26 13:24:2
 ly show parse -f  "2006/01/02 15:04:05"  #将把当前时间格式化成"2006/01/02 15:04:05" 2021/08/26 13:26:55
 ```
 
-## example
+## Example
 
 ` Algorithm` algorithm example
 
