@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	//sequence() //计算斐波那契数的算法
 
@@ -42,23 +40,33 @@ func main() {
 
 	//wage() //工龄工资计算器
 
-	x := map[string]int{
-		"A": 0,
-		"B": 1,
-		"C": 2,
-		"D": 3,
-	}
-	y := map[string]int{
-		"B": 1,
-		"C": 2,
-		"D": 3,
-	}
-	z := map[string]int{
-		"A": 0,
-		"B": 1,
-		"C": 2,
-		"D": 3,
-	}
-	fmt.Println(equal(x, y))
-	fmt.Println(equal(x, z))
+	//x := map[string]int{  //判断两个map是否拥有相同的键和值
+	//	"A": 0,
+	//	"B": 1,
+	//	"C": 2,
+	//	"D": 3,
+	//}
+	//y := map[string]int{
+	//	"B": 1,
+	//	"C": 2,
+	//	"D": 3,
+	//}
+	//z := map[string]int{
+	//	"A": 0,
+	//	"B": 1,
+	//	"C": 2,
+	//	"D": 3,
+	//}
+	//fmt.Println(equal(x, y))
+	//fmt.Println(equal(x, z))
+
+	//student := map[string]int { //实现顺序遍历map中的元素
+	//	"lisa":     17,
+	//	"bob":      20,
+	//	"victoria": 24,
+	//	"sabit":    40,
+	//}
+	//traverseMap(student)
+
+	factorial()
 }

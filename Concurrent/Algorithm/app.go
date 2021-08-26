@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"sort"
 	"time"
 )
 
@@ -168,4 +169,28 @@ func equal(x, y map[string]int) bool {
 
 	}
 	return true
+}
+
+func traverseMap(student map[string]int) {
+	var names []string
+	for name := range student {
+		names = append(names, name)
+	}
+	sort.Strings(names)
+	for _, name := range names {
+		fmt.Printf("%s的年龄是%d\n", name, student[name])
+	}
+}
+
+func factorial() {
+	m := make(map[int]int)
+	for i := 0; i <= 20; i++ {
+		if i == 0 {
+			m[i] = 1
+		} else {
+			m[i] = m[i-1] * i
+		}
+		fmt.Println(i, "的阶乘是", m[i])
+	}
+
 }
