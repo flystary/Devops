@@ -1,6 +1,6 @@
 # Devops
 
-## cmd mian.go
+### cmd and mian.go
 
 cobra project
 
