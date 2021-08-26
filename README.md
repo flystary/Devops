@@ -4,7 +4,7 @@
 
 This is an example of the `cobra` project
 
-Execute the following command in the current path to compile the project
+Execute the following command in the current path to compile the project,you will appear a ly executable file.
 
 ```bash
 go build -o ly  main.go
