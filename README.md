@@ -35,7 +35,7 @@ Flags:
 Use "ly [command] --help" for more information about a command.
 ```
 
-##### exaple
+##### example
 How to use `ly`
 
 ```bash
