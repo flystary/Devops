@@ -1,6 +1,6 @@
 # Devops
 
-### cmd and mian.go
+## cmd and mian.go
 
 This is an example of the `cobra` project
 
@@ -43,7 +43,7 @@ ly show                                  #展示当前时间  2021-08-26 13:24:2
 ly show parse -f  "2006/01/02 15:04:05"  #将把当前时间格式化成"2006/01/02 15:04:05" 2021/08/26 13:26:55
 ```
 
-### example
+## example
 
 ` Algorithm` algorithm example
 
@@ -51,7 +51,7 @@ ly show parse -f  "2006/01/02 15:04:05"  #将把当前时间格式化成"2006/01
 
 ` Algorithm` algorithm example
 
-### NetPing
+## NetPing
 
 project instruction ping written in go
 
