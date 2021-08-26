@@ -21,14 +21,14 @@ Ping once per minute (ping 10 packets, interval 0.5, recording delay and packet 
  ```
 
 #### txt
+Save the data in a txt file
 
+##### main.go
 Defines a map of type interface{}
 
 ```go
 var ipInfo = make(map[string]interface{})
 ```
-
-把数据保存在txt文件中，
 
 ##### txt_v2
 
