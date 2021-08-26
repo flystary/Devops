@@ -38,5 +38,6 @@ func main() {
 	//}
 	//fmt.Println(str)
 
-	wage()
+	wage() //工龄工资计算器
+
 }

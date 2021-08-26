@@ -111,3 +111,48 @@ func wage() {
 	fmt.Printf("您目前工作了%d年，基本工资为%d元,应涨工资%d元,涨后工资%d元", n, salary, a, sum)
 	return
 }
+
+/*
+func mapDbWrite()  {
+
+	//创建集合
+	var countryCapitalMap map[string]string
+	countryCapitalMap = make(map[string]string)
+
+	//map插入对应的key - value对,各个国家对应的首都
+	countryCapitalMap["France"] = "巴黎"
+	countryCapitalMap["Italy"] = "罗马"
+	countryCapitalMap["Japan"] = "东京"
+	countryCapitalMap["India "] = "新德里"
+
+	for country := range countryCapitalMap {
+		fmt.Println(country, "首都是",countryCapitalMap[country])
+	}
+
+	//查看元素在集合中是否存在
+	capital, ok := countryCapitalMap["American"]
+	if ok {
+		fmt.Println("American 的首都是", capital)
+	}else {
+		fmt.Println("American 的首都不存在")
+	}
+	//用户名：密码@tcp(地址:3306)/数据库名
+	db, err := sql.Open("mysql", "root:123456@tcp(192.168.2.132:3306)/test")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	//往数据插入数据
+	for k,v := range countryCapitalMap {
+	result, err := db.Exec("INSERT INTO countryCapital(country,capital)VALUES (?,?)", k, v)
+		//result, err := db.Prepare("INSERT INTO countryCapital(country,capital)VALUES ($1,$2)")
+		if err != nil {
+			fmt.Println(result,err)
+		}
+		//result, err = result.Exec(k,v)
+	}
+
+
+
+}
+*/
