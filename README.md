@@ -37,11 +37,10 @@ Use "ly [command] --help" for more information about a command.
 
 ##### example
 How to use `ly`
-
 ```bash
-ly version     #显示当前ly版本
-ly show        #展示当前时间  2021-08-26 13:24:25.3019767 +0800 CST m=+0.018521101
-ly show parse -f  "2006/01/02 15:04:05"  ##将把当前时间格式化成"2006/01/02 15:04:05" 2021/08/26 13:26:55
+ly version                               #显示当前ly版本
+ly show                                  #展示当前时间  2021-08-26 13:24:25.3019767 +0800 CST m=+0.018521101
+ly show parse -f  "2006/01/02 15:04:05"  #将把当前时间格式化成"2006/01/02 15:04:05" 2021/08/26 13:26:55
 ```
 
 ### example
