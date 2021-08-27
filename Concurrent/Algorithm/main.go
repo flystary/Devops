@@ -76,7 +76,33 @@ func main() {
 	//res := josephus(n, k)
 	//fmt.Println(res)
 
-	s := "A, B, 44..., 5 z ,a, b, ...,&&z   " //.给出一串字符，要求统计出里面的字母、数字、空格以及其他字符的个数。
-	countUnicode(s)
+	//s := "A, B, 44..., 5 z ,a, b, ...,&&z   " //.给出一串字符，要求统计出里面的字母、数字、空格以及其他字符的个数。
+	//countUnicode(s)
+
+	//var s = []int{1, 2, 3, 4, 5, 6, 7}  //就地反转一个整型slice中的元素
+	//fmt.Println(reverse(s))
+
+	//x := []string{"a","b","c","d"}   //两个slice是否拥有相同的元素
+	//y := []string{"a","d","p","d"}
+	//z := []string{"a","b","c","d"}
+	//
+	//fmt.Println(equals(x, z))
+	//fmt.Println(equals(y, z))
+
+	//a := [][]int {  //翻转二维数组
+	//	{0, 1, 2, 3},
+	//	{4, 5, 6, 7},
+	//	{8, 9, 10, 11},
+	//}
+	//transpose(a)
+
+	//var i int = 10   //斐波那契数列
+	//var j int = 3
+	//fmt.Println("第", i+1, "项的值为", isFibonacciSequence(i))
+	//fmt.Println("第", j+1, "项的值为", isFibonacciSequence(j))
+	//
+	//
+	//sum := (f(10))   //猴子吃桃子
+	//fmt.Printf("第一天摘了%d个桃子", sum)
 
 }

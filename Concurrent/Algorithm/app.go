@@ -243,3 +243,65 @@ func countUnicode(s string) {
 	fmt.Printf("空格的个数为%d\n", space)
 	fmt.Printf("其他字符的个数为%d\n", other)
 }
+
+func reverse(s []int) []int {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[j]
+	}
+	return s
+}
+
+func equals(x, y []string) bool {
+	if len(x) != len(y) {
+		return false
+	}
+	for i := range x {
+		if x[i] != y[i] {
+			return false
+		}
+	}
+	return true
+}
+
+func transpose(a [][]int) [][]int {
+	if len(a[0]) == 0 {
+		return nil
+	}
+	row := len(a[0])
+	col := len(a)
+	arr := make([][]int, row, row)
+	for i := 0; i <= row-1; i++ {
+		arr[i] = make([]int, col)
+	}
+	for k := col - 1; k >= 0; k-- {
+		for y := row - 1; y >= 0; y-- {
+			arr[y][k] = a[k][y]
+		}
+	}
+	fmt.Println(arr)
+	return arr
+}
+
+func isFibonacciSequence(i int) int {
+	if i <= 1 {
+		return 1
+	}
+	return isFibonacciSequence(i-1) + isFibonacciSequence(i-2)
+}
+
+func f(n int) int {
+	if n == 1 {
+		return 1
+	} else {
+		return 2*f(n-1) + 2
+	}
+}
+
+func sellGoldfish() {
+	res := 11
+	for j := 4; j >= 1; j-- {
+		res = (res*(j+1) + 1) / j
+	}
+
+	fmt.Println("原来的鱼缸中共有", res, "条鱼")
+}
