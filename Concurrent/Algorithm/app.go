@@ -194,3 +194,33 @@ func factorial() {
 	}
 
 }
+
+func factorialSort() {
+	m := make(map[int]int)
+	for i := 0; i <= 20; i++ {
+		if i == 0 {
+			m[i] = 1
+		} else {
+			m[i] = m[i-1] * i
+
+		}
+
+	}
+	arr := make([]int, 0)
+	for k, _ := range m {
+		arr = append(arr, k)
+
+	}
+	sort.Ints(arr)
+	for i := 0; i <= len(arr)-1; i++ {
+		fmt.Println(arr[i], "的阶乘是", m[arr[i]])
+	}
+
+}
+
+func josephus(n, k int) int {
+	if n == 1 {
+		return n
+	}
+	return (josephus(n-1, k)+k-1)%n + 1
+}

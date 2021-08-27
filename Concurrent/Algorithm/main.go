@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//sequence() //计算斐波那契数的算法
 
@@ -68,5 +70,12 @@ func main() {
 	//}
 	//traverseMap(student)
 
-	factorial()
+	//factorial()
+	//factorialSort()
+
+	n := 5
+	k := 2
+	res := josephus(n, k)
+	fmt.Println(res)
+
 }
