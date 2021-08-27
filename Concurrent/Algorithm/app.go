@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"math"
 	"sort"
 	"time"
@@ -304,4 +305,13 @@ func sellGoldfish() {
 	}
 
 	fmt.Println("原来的鱼缸中共有", res, "条鱼")
+}
+
+func getWorldFrequency(readFilePath string, writeFilePath string) {
+	var fileText string
+	var wordFrequencyMap = make(ma[string]
+	int)
+
+	fileData, err := ioutil.ReadDir(readFilePath)
+
 }
