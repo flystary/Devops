@@ -68,12 +68,15 @@ func main() {
 	//}
 	//traverseMap(student)
 
-	//factorial()
-	factorialSort()
+	//factorial()  //定义一个map，存1到20的阶乘并顺序输出
+	//factorialSort() //阶乘计算完再顺序输出
 
-	//n := 5
+	//n := 5 //约瑟夫环问题
 	//k := 2
 	//res := josephus(n, k)
 	//fmt.Println(res)
+
+	s := "A, B, 44..., 5 z ,a, b, ...,&&z   " //.给出一串字符，要求统计出里面的字母、数字、空格以及其他字符的个数。
+	countUnicode(s)
 
 }
