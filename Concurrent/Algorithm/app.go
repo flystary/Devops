@@ -1,13 +1,13 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"math"
 	"os"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 	"unicode"
@@ -347,18 +347,37 @@ func getWordFrequency(readFilePath string, writeFilePath string) {
 		return lstWordFrequencyNum[i].Num > lstWordFrequencyNum[j].Num
 	})
 	fmt.Println("安装单词出现的频率由高到底排序", lstWordFrequencyNum)
-	var jsonBytes []byte
+	////写入文件
 	var arrJsonBytes string
-	for _, v := range lstWordFrequencyNum {
-		jsonBytes, err = json.Marshal(v)
-		if err != nil {
-			log.Fatal(err)
+	arrJsonBytes = arrJsonBytes + "[" + "\r\n"
+	for k, v := range lstWordFrequencyNum {
+
+		arrJsonBytes = arrJsonBytes + "{" + "\"" + v.Word + "\"" + ":" + strconv.Itoa(v.Num) + "}"
+		if k != len(lstWordFrequencyNum)-1 {
+			arrJsonBytes = arrJsonBytes + "," + "\r\n"
 		}
-		arrJsonBytes = arrJsonBytes + string(jsonBytes)
+
 	}
+	arrJsonBytes = arrJsonBytes + "\r\n" + "]"
 	err = ioutil.WriteFile(writeFilePath, []byte(arrJsonBytes), os.ModePerm)
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	/*
+		var jsonBytes []byte
+		var arrJsonBytes string
+		for _, v := range lstWordFrequencyNum {
+			jsonBytes, err = json.Marshal(v)
+			if err != nil {
+				log.Fatal(err)
+			}
+			arrJsonBytes = arrJsonBytes + string(jsonBytes)
+		}
+		err = ioutil.WriteFile(writeFilePath, []byte(arrJsonBytes), os.ModePerm)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+	*/
 }
