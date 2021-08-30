@@ -1,11 +1,16 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"math"
+	"os"
 	"sort"
+	"strings"
 	"time"
+	"unicode"
 )
 
 func sequence() {
@@ -307,11 +312,53 @@ func sellGoldfish() {
 	fmt.Println("原来的鱼缸中共有", res, "条鱼")
 }
 
-func getWorldFrequency(readFilePath string, writeFilePath string) {
+func getWordFrequency(readFilePath string, writeFilePath string) {
 	var fileText string
-	var wordFrequencyMap = make(ma[string]
-	int)
+	var wordFrequencyMap = make(map[string]int)
 
-	fileData, err := ioutil.ReadDir(readFilePath)
+	fileData, err := ioutil.ReadFile(readFilePath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fileText = string(fileData)
+	f := func(c rune) bool {
+		if !unicode.IsLetter(c) && !unicode.IsNumber(c) {
+			return true
+		}
+		return false
+	}
+	arr := strings.FieldsFunc(fileText, f)
+	for _, v := range arr {
+		if _, ok := wordFrequencyMap[v]; ok {
+			wordFrequencyMap[v] = wordFrequencyMap[v] + 1
+		} else {
+			wordFrequencyMap[v] = 1
+		}
+	}
+	type wordFrequencyNum struct {
+		Word string
+		Num  int
+	}
+	var lstWordFrequencyNum []wordFrequencyNum
+	for k, v := range wordFrequencyMap {
+		lstWordFrequencyNum = append(lstWordFrequencyNum, wordFrequencyNum{k, v})
+	}
+	sort.Slice(lstWordFrequencyNum, func(i, j int) bool {
+		return lstWordFrequencyNum[i].Num > lstWordFrequencyNum[j].Num
+	})
+	fmt.Println("安装单词出现的频率由高到底排序", lstWordFrequencyNum)
+	var jsonBytes []byte
+	var arrJsonBytes string
+	for _, v := range lstWordFrequencyNum {
+		jsonBytes, err = json.Marshal(v)
+		if err != nil {
+			log.Fatal(err)
+		}
+		arrJsonBytes = arrJsonBytes + string(jsonBytes)
+	}
+	err = ioutil.WriteFile(writeFilePath, []byte(arrJsonBytes), os.ModePerm)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 }

@@ -105,4 +105,8 @@ func main() {
 	//sum := (f(10))   //猴子吃桃子
 	//fmt.Printf("第一天摘了%d个桃子", sum)
 
+	readFilePath := "Concurrent/Algorithm/artical.txt"
+	writeFilePath := "Concurrent/Algorithm/wordFrequency.txt"
+	getWordFrequency(readFilePath, writeFilePath)
+
 }
