@@ -31,8 +31,7 @@ func init() {
 	// showCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
-//ShowTime
 func ShowTime(cmd *cobra.Command, args []string) {
 	times := time.Now()
-	fmt.Println("当前时间：", times)
+	fmt.Println("当前时间：", times.Format("2006/01/02 15:04:05"))
 }
