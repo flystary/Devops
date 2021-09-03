@@ -381,3 +381,72 @@ func getWordFrequency(readFilePath string, writeFilePath string) {
 
 	*/
 }
+
+func BubbleSort(input []int) []int {
+	n := len(input)
+	swapped := true
+	for swapped {
+		swapped = false
+		for i := 0; i < n-1; i++ {
+			if input[i] > input[i+1] {
+				fmt.Println("Swapping")
+				input[i], input[i+1] = input[i+1], input[i]
+				swapped = true
+			}
+		}
+	}
+	return input
+}
+
+//func QuickSort(array []int) []int  {
+//	if len(array) < 2 {
+//		return array
+//	}
+//
+//	// we want the left-most and the right-most index of
+//	// the array we are going to sort
+//	left, right := 0, len(array)-1
+//
+//	// choose a random pivot
+//	pivotIndex := rand.Int() % len(array)
+//	array[pivotIndex], array[right] = array[right], array[pivotIndex]
+//
+//	for i := range array {
+//		if array[i] < array[right] {
+//			array[i], array[left] = array[left],array[i]
+//			left++
+//		}
+//	}
+//	array[left],array[right] = array[right], array[left]
+//	QuickSort(array[:left])
+//	QuickSort(array[left+1:])
+//
+//	return array
+//}
+
+func Sort(list []int, left, right int) {
+	if right < left {
+		return
+	}
+	flag := list[left]
+	start := left
+	end := right
+	for {
+		if start == end {
+			break
+		}
+		for list[end] >= flag && end > start {
+			end--
+		}
+		for list[start] <= flag && end > start {
+			start++
+		}
+		if end > start {
+			SwapGo(list, start, end)
+		}
+	}
+	SwapGo(list, left, start)
+	Sort(list, left, start-1)
+	Sort(list, start+1, right)
+
+}
