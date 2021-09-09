@@ -16,6 +16,7 @@ require (
 	github.com/spf13/viper v1.8.1 // indirect
 	github.com/urfave/cli/v2 v2.3.0 // indirect
 	go.opentelemetry.io/otel v0.20.0 // indirect
+	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5 // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/net v0.0.0-20210908191846-a5e095526f91 // indirect
 	golang.org/x/sys v0.0.0-20210908233432-aa78b53d3365 // indirect
@@ -23,4 +24,5 @@ require (
 	golang.org/x/tools v0.1.5 // indirect
 	google.golang.org/genproto v0.0.0-20210903162649-d08c68adba83 // indirect
 	google.golang.org/grpc v1.40.0 // indirect
+	google.golang.org/protobuf v1.27.1 // indirect
 )
