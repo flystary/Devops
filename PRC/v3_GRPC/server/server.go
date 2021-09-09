@@ -1,8 +1,7 @@
 package main
 
 import (
-	"Devops/PRC/v2_protobuf/message"
-	message2 "Devops/PRC/v3_GRPC/message"
+	"Devops/PRC/v3_GRPC/message"
 	"context"
 	"crypto/md5"
 	"encoding/hex"
@@ -28,7 +27,7 @@ func ToMd5(s string) string {
 func main() {
 	server := grpc.NewServer()
 
-	message2.RegisterEncryptionServiceServer(server, new(EncryptionServiceImpl))
+	message.RegisterEncryptionServiceServer(server, new(EncryptionServiceImpl))
 
 	lis, err := net.Listen("tcp", ":8081")
 	if err != nil {

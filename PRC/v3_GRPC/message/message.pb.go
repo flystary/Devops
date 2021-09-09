@@ -7,7 +7,6 @@
 package message
 
 import (
-	"Devops/PRC/v3_GRPC"
 	context "context"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -263,7 +262,7 @@ func (*UnimplementedEncryptionServiceServer) Encryption(context.Context, *Encryp
 	return nil, status.Errorf(codes.Unimplemented, "method Encryption not implemented")
 }
 
-func RegisterEncryptionServiceServer(s *grpc.Server, srv *main.EncryptionServiceImpl) {
+func RegisterEncryptionServiceServer(s *grpc.Server, srv EncryptionServiceServer) {
 	s.RegisterService(&_EncryptionService_serviceDesc, srv)
 }
 

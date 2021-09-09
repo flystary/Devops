@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	client, err := rpc.DialHTTP("tcp", "lcalhost:8081")
+	client, err := rpc.DialHTTP("tcp", "127.0.0.1:8081")
 	if err != nil {
 		panic(err.Error())
 	}

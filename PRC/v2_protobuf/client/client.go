@@ -4,10 +4,9 @@ import (
 	"Devops/PRC/v2_protobuf/message"
 	"fmt"
 	"net/rpc"
-	"testing"
 )
 
-func TestClient(t *testing.T) {
+func main() {
 	client, err := rpc.DialHTTP("tcp", "localhost:8081")
 	if err != nil {
 		panic(err.Error())
