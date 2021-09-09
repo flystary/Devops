@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Devops/PRC/protobuf/message"
+	"Devops/PRC/v2_protobuf/message"
 	"crypto/md5"
 	"encoding/hex"
 	"net"
