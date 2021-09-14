@@ -9,6 +9,7 @@
         <function importPath="fmt" name="Println" />
         <function importPath="fmt" name="Print" />
         <function importPath="fmt" name="Fprintf" />
+        <function importPath="Devops/Concurrent/defer_close" name="solution01" />
       </functions>
       <methods>
         <method importPath="hash" receiver="Hash" name="Write" />
@@ -26,6 +27,7 @@
         <method importPath="github.com/streadway/amqp" receiver="*Connection" name="Close" />
         <method importPath="github.com/streadway/amqp" receiver="*Channel" name="Close" />
         <method importPath="github.com/streadway/amqp" receiver="Delivery" name="Ack" />
+        <method importPath="os" receiver="*File" name="Close" />
       </methods>
     </inspection_tool>
     <inspection_tool class="GoVetStructTag" enabled="false" level="WARNING" enabled_by_default="false" />
