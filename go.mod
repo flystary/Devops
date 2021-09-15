@@ -10,6 +10,8 @@ require (
 	github.com/go-ping/ping v0.0.0-20210506233800-ff8be3320020 // indirect
 	github.com/go-redis/redis/v8 v8.11.3 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/gorilla/mux v1.8.0 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/mattn/go-isatty v0.0.13 // indirect
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/spf13/cobra v1.2.1 // indirect

@@ -31,4 +31,7 @@ func main() {
 	//	}
 	//}
 
+	//str()
+
+	strs()
 }
