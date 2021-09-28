@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"time"
 )
 
 /*
@@ -26,23 +27,23 @@ func test() {
 	fmt.Println("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
 }
 
-func main() {
-	//go func() {
-	//	fmt.Println("aaaaaaaaaaaaaaaaaaaa")
-	//	test()
-	//	fmt.Println("ddddddddddddddddddddddddd")
-	//}()
-	//
-	//for {}
-
-	n := runtime.GOMAXPROCS(1)
-	fmt.Println("n = ", n)
-
-	for {
-		go fmt.Print(1)
-		fmt.Print(0)
-	}
-}
+//func main() {
+//	//go func() {
+//	//	fmt.Println("aaaaaaaaaaaaaaaaaaaa")
+//	//	test()
+//	//	fmt.Println("ddddddddddddddddddddddddd")
+//	//}()
+//	//
+//	//for {}
+//
+//	//n := runtime.GOMAXPROCS(1)
+//	//fmt.Println("n = ", n)
+//	//
+//	//for {
+//	//	go fmt.Print(1)
+//	//	fmt.Print(0)
+//	//}
+//}
 
 /*
 第一次执行（runtime.GOMAXPROCS(1)）时，最多同时只能有一个goroutine被执行。所以会打印很多一。
@@ -50,3 +51,24 @@ func main() {
 第二次执行(runtime.GOMAXPROCS(2))时，我们使用了两个CPU，所以两个goroutine可以一起被执行，以同样的频率交替打印0和1。
 
 */
+var tm = time.Now().Format("15:04:05.000")
+
+func a() {
+	for i := 1; i < 10; i++ {
+		fmt.Println(tm, "A:", i)
+	}
+}
+
+func b() {
+	for i := 1; i < 10; i++ {
+		fmt.Println(tm, "B:", i)
+	}
+}
+
+func main() {
+
+	runtime.GOMAXPROCS(1)
+	go a()
+	go b()
+	time.Sleep(time.Second)
+}
