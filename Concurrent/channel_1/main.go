@@ -1,7 +1,7 @@
 package main
 
 import (
-	main2 "Devops/Concurrent/Algorithm"
+	//main2 "Devops/Concurrent/Algorithm"
 	"fmt"
 	"time"
 )
@@ -33,6 +33,6 @@ func main() {
 	//go Person1()
 	//go Person2()
 	//for {}
-	main2.sequence()
+	//main2.sequence()
 
 }

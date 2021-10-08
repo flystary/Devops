@@ -97,7 +97,7 @@ func main() {
 	}
 
 	//1分钟执行一次
-	CreateCron(ip)
+	go CreateCron(ip)
 	for {
 	}
 }
