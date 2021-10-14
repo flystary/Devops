@@ -11,8 +11,7 @@ type Job interface {
 	Do() //do something...
 }
 
-// Worker ----------------------------------------------
-//worker 工人
+// Worker 工人
 type Worker struct {
 	JobQueue chan Job  //任务队列
 	Quit     chan bool //停止当前任务
@@ -50,8 +49,7 @@ func (w Worker) Run(wq chan chan Job) {
 	}()
 }
 
-// WorkerPool ----------------------------------------------
-//workerpool 领导
+//WorkerPool 领导
 type WorkerPool struct {
 	workerlen   int      //线程池中  worker(工人) 的数量
 	JobQueue    chan Job //线程池的  job 通道
@@ -91,7 +89,6 @@ func (wp *WorkerPool) Run() {
 	}()
 }
 
-// Dosomething ----------------------------------------------
 type Dosomething struct {
 	Num int
 }
